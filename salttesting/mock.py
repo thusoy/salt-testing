@@ -53,10 +53,7 @@ except ImportError:
         def __init__(self, *args, **kwargs):
             pass
 
-        def dict(self, *args, **kwargs):
-            return self
-
-        def multiple(self, *args, **kwargs):
+        def __getattr__(self, name):
             return self
 
         def __call__(self, *args, **kwargs):
